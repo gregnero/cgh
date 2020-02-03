@@ -6,3 +6,5 @@ This is setup to be a Python module.  Clone this repository in your PYTHONPATH d
 
 # DEPENDENCIES #
 * numpy
+* matplotlib.pyplot
+* cgh

@@ -13,7 +13,10 @@ def padScene(scene, x, y, available_pad):
       y             : (int) the y-coordinate of the object in the scene
       available_pad : (int) total (linear) padding along one array dimension
 
-    returns: padded version of the input numpy array and the new center coordinates of the object 
+    returns: list that contains:
+      0 : the padded scene
+      1 : the true x coordinate of object in new padded scene
+      2 : the true y coordinate of object in new padded scene
     '''
 
     #Get dimension of input array 

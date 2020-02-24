@@ -20,7 +20,7 @@ def isPhaseBehaved(real_part, imag_part):
 
     max_abs_phase = np.max(np.abs(phase))
 
-    accuracy = 0.05
+    accuracy = 0.15
     threshold_upper = np.pi + accuracy
     threshold_lower = np.pi - accuracy
 

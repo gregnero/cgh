@@ -30,7 +30,7 @@ def inspectCGH(CGH, SHOWCGH):
         
     
         #Establish plot conditions
-        fig, (ax1, ax2) = plt.subplots(1,2, figsize = (15,10))
+        fig, (ax1, ax2) = plt.subplots(1,2, figsize = (10,5))
 
         #Take fft and get magnitude
         fft = np.fft.fftshift(np.fft.fft2(CGH))
@@ -54,7 +54,7 @@ def inspectCGH(CGH, SHOWCGH):
         
     
         #Establish plot conditions
-        fig, (ax1) = plt.subplots(1,1, figsize = (15,10))
+        fig, (ax1) = plt.subplots(1,1, figsize = (10,5))
 
         #Take fft and get magnitude
         fft = np.fft.fftshift(np.fft.fft2(CGH))

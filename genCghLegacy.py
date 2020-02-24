@@ -1,13 +1,12 @@
 import numpy as np
 import cgh
 
-def genCGH(complex_array, phase_sectors, max_cell_magnitude, rounding_type, verbose, return_type):
+def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type, verbose, return_type):
 
     '''
     Author: Gregory M. Nero
 
     Description: constructs a cell-based CGH from a complex array using intrasample error diffusion
-    TODO: intersample ED
 
     Note: restricted error diffusion to the unit circle because of limited cell representation
     
@@ -23,6 +22,8 @@ def genCGH(complex_array, phase_sectors, max_cell_magnitude, rounding_type, verb
       return_type        : (int) return a CGH with the desired number of projections
                          
     returns: (numpy array) the CGH
+
+    Made Legacy on 24-Feb-2020
     '''
 
     #Get the real and imaginary parts

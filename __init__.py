@@ -5,6 +5,6 @@ from .genSubAp import genSubAp
 from .isCongruent import isCongruent
 from .isMaxMagUnity import isMaxMagUnity
 from .isPhaseBehaved import isPhaseBehaved
-from .genCGH import genCGH
+from .genCghLegacy import genCghLegacy
 from .idMax import idMax
 from .padScene import padScene

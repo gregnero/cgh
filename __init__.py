@@ -8,3 +8,4 @@ from .isPhaseBehaved import isPhaseBehaved
 from .genCghLegacy import genCghLegacy
 from .idMax import idMax
 from .padScene import padScene
+from .genCgh import genCgh

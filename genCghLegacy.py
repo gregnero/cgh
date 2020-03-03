@@ -26,6 +26,9 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
     Made Legacy on 24-Feb-2020
     '''
 
+    #Include T3 value for genSubAp for legacy compatibility
+    T3 = False
+
     #Get the real and imaginary parts
     real_part = np.real(complex_array)
     imag_part = np.imag(complex_array)
@@ -123,7 +126,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                 #Take care of the case where the raw sample is zero
                 if (positive_projection_sum == 0):
    
-                    blank_cell = cgh.genSubAp(0, 0, max_cell_magnitude, phase_sectors)
+                    blank_cell = cgh.genSubAp(0, 0, max_cell_magnitude, phase_sectors, T3)
                     linear_array_of_cells_p1.append(blank_cell)
                     linear_array_of_cells_p2.append(blank_cell)
                     linear_array_of_cells_p3.append(blank_cell)
@@ -162,7 +165,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude1 = max_cell_magnitude
 
                             #Catch the first projection
-                            p1 = cgh.genSubAp(int(scaled_magnitude1), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p1 = cgh.genSubAp(int(scaled_magnitude1), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p1.append(p1)
                            
                             #Store the projection and its scaled magnitude in the dictionary
@@ -239,7 +242,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude2 = max_cell_magnitude
 
                             #Catch the second projection
-                            p2 = cgh.genSubAp(int(scaled_magnitude2), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p2 = cgh.genSubAp(int(scaled_magnitude2), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p2.append(p1+p2)
 
                             #Store the projection and its scaled magnitude in the dictionary
@@ -315,7 +318,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude3 = max_cell_magnitude
 
                             #Catch the third projection
-                            p3 = cgh.genSubAp(int(scaled_magnitude3), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p3 = cgh.genSubAp(int(scaled_magnitude3), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p3.append(p1+p2+p3)
 
                             #Also fill the p4 array because we only want three projections represented
@@ -373,7 +376,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude1 = max_cell_magnitude
 
                             #Catch the first projection
-                            p1 = cgh.genSubAp(int(scaled_magnitude1), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p1 = cgh.genSubAp(int(scaled_magnitude1), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p1.append(p1)
 
                             #Store the projection and its scaled magnitude in the dictionary
@@ -449,7 +452,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude2 = max_cell_magnitude
                             
                             #Catch the second projection
-                            p2 = cgh.genSubAp(int(scaled_magnitude2), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p2 = cgh.genSubAp(int(scaled_magnitude2), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p2.append(p1+p2)
 
                             #Store the projection and its scaled magnitude in the dictionary
@@ -525,7 +528,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude3 = max_cell_magnitude
 
                             #Catch the third projection
-                            p3 = cgh.genSubAp(int(scaled_magnitude3), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p3 = cgh.genSubAp(int(scaled_magnitude3), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p3.append(p1+p2+p3)
 
                             #Store the projection and its scaled magnitude in the dictionary
@@ -601,7 +604,7 @@ def genCghLegacy(complex_array, phase_sectors, max_cell_magnitude, rounding_type
                                 scaled_magnitude4 = max_cell_magnitude
 
                             #Catch the fourth projection
-                            p4 = cgh.genSubAp(int(scaled_magnitude4), current_basis_index, max_cell_magnitude, phase_sectors)
+                            p4 = cgh.genSubAp(int(scaled_magnitude4), current_basis_index, max_cell_magnitude, phase_sectors, T3)
                             linear_array_of_cells_p4.append(p1+p2+p3+p4)
 
                             #Store the projection and its scaled magnitude in the dictionary

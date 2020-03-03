@@ -1,6 +1,6 @@
 from .genBasisVectors import genBasisVectors
 from .makE import makE
-from .inspectCGH import inspectCGH
+from .inspectCgh import inspectCgh
 from .genSubAp import genSubAp
 from .isCongruent import isCongruent
 from .isMaxMagUnity import isMaxMagUnity

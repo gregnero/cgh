@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def inspectCGH(CGH, SHOWCGH):
+def inspectCgh(CGH, SHOWCGH):
 
     '''
     Description: 'Inspects' the CGH by taking its fft and displaying its squared magintude
